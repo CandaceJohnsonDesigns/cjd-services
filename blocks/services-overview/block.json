@@ -1,0 +1,30 @@
+{
+	"apiVersion": 2,
+	"name": "cjd-blocks/services-overview",
+	"version": "0.1.0",
+	"title": "Services Overview",
+	"category": "text",
+	"icon": "index-card",
+	"description": "Showcases the Service categories along with a description.",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "right"
+		}
+	},
+	"supports": {
+		"anchor": true
+	},
+	"styles": [
+		{
+			"name": "default",
+			"label": "Default",
+			"isDefault": true
+		}
+	],
+	"render_callback": "cjd_blocks_render_block_services_overview",
+	"textdomain": "cjd-blocks-services-overview",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
