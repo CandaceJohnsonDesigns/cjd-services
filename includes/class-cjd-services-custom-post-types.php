@@ -48,6 +48,7 @@ class CJD_Services_Custom_Post_Types {
 	 */
 	public function __construct() {
 		add_action( 'init', array( $this, 'create_post_types' ) );
+		add_filter( 'enter_title_here', array( $this, 'custom_enter_title') );
 
 		add_filter( sprintf( 'manage_%s_posts_columns', self::CUSTOM_POST_TYPE),       array( $this, 'edit_admin_columns' ) );
 	}
@@ -98,6 +99,14 @@ class CJD_Services_Custom_Post_Types {
 
 		return $columns;
 	}
+
+	function custom_enter_title( $input ) {
+        if ( 'services' === get_post_type() ) {
+    	    return __( 'Enter Service Title...', 'cjd-services' );
+        }
+
+        return $input;
+    }
 }
 
 CJD_Services_Custom_Post_Types::register();
