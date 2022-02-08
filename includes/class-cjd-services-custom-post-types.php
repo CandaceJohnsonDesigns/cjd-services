@@ -78,7 +78,7 @@ class CJD_Services_Custom_Post_Types {
 					'all_items' => __( 'All Services' ),
 				),
 				'public' => true,
-				'supports' => array ( 'title', 'editor', 'custom-fields', 'publicize', 'jetpack_sitemap_post_types' ),
+				'supports' => array ( 'title', 'editor', 'custom-fields', 'post_thumbnail', 'publicize', 'jetpack_sitemap_post_types' ),
 				'taxonomies' => array( 'service-category' ), 
 				'hierarchical' => false,
 				'menu_position' => 2,
